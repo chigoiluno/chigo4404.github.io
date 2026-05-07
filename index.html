@@ -41,14 +41,41 @@
     I design secure, scalable Azure environments using Infrastructure as Code—helping organizations reduce risk, optimize cost, and operate confidently.
   </p>
 
-  <div class="space-x-4" data-aos="fade-up" data-aos-delay="300">
-    <a href="#projects" class="bg-blue-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
+  <div class="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="300">
+
+  <!-- PRIMARY CTA -->
+  <a href="#projects"
+     class="group relative bg-blue-600 px-6 py-3 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+    <span class="relative z-10 flex items-center gap-2">
       View Projects
-    </a>
-    <a href="#contact" class="border border-gray-500 px-6 py-3 rounded-2xl hover:bg-gray-800 transition">
+      <span class="transition group-hover:translate-x-1">→</span>
+    </span>
+
+    <span class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 blur-xl transition"></span>
+  </a>
+
+  <!-- SECONDARY CTA -->
+  <a href="#contact"
+     class="group border border-gray-500 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-800 hover:border-gray-300">
+
+    <span class="flex items-center gap-2">
       Contact Me
-    </a>
-  </div>
+      <span class="opacity-0 group-hover:opacity-100 transition">→</span>
+    </span>
+  </a>
+
+  <!-- DOWNLOAD CV -->
+  <a href="cv.pdf" download
+     class="group bg-gray-800 border border-gray-700 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-700 hover:border-gray-500">
+
+    <span class="flex items-center gap-2">
+      Download CV
+      <span class="transition group-hover:translate-y-1">⬇</span>
+    </span>
+  </a>
+
+</div>
 </section>
 
 <!-- BANNER -->
@@ -79,7 +106,7 @@
   </div>
 </section>
 
-<!-- PROJECTS (INTERACTIVE) -->
+<!-- PROJECTS (ELITE INTERACTIVE + DIAGRAM PREVIEW) -->
 <section id="projects" class="py-20 px-6">
   <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
     Featured Work
@@ -87,114 +114,178 @@
 
   <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-    <!-- CARD -->
-    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    <!-- CARD 1 -->
+    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer hover:-translate-y-1"
          data-aos="fade-up">
+
+      <!-- DIAGRAM PREVIEW -->
+      <img src="images/landing-zone-diagram.png"
+           class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
 
       <!-- CONTENT -->
       <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Azure Landing Zone</h3>
+        <h3 class="text-xl font-semibold mb-2 flex justify-between">
+          Azure Landing Zone
+          <span class="text-blue-400 text-sm">↗</span>
+        </h3>
+
         <p class="text-gray-400 text-sm">
           Secure hub-spoke architecture with firewall, private endpoints, and CAF alignment.
+        </p>
+
+        <p class="mt-4 text-blue-400 text-sm font-medium">
+          View Case Study →
         </p>
       </div>
 
       <!-- HOVER OVERLAY -->
-      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-6">
+      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
 
-        <h3 class="text-lg font-semibold mb-2">Architecture Overview</h3>
+        <img src="images/landing-zone-diagram.png"
+             class="w-full h-32 object-contain mb-4 rounded-lg">
 
-        <p class="text-gray-400 text-sm mb-4">
-          Hub-spoke model with Azure Firewall, NSGs, and private endpoints enforcing Zero Trust principles.
+        <p class="text-gray-400 text-xs mb-4">
+          Hub-spoke architecture with Azure Firewall, NSGs, and private endpoints.
         </p>
 
         <div class="flex gap-3">
           <a href="landing-zone.html"
-             class="bg-blue-600 px-4 py-2 rounded-lg text-sm hover:scale-105 transition">
+             class="bg-blue-600 px-4 py-2 rounded-lg text-sm">
             Case Study
           </a>
 
           <a href="https://github.com/chigo4404/azure-landing-zone-terraform"
              target="_blank"
-             class="border border-gray-500 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+             class="border border-gray-500 px-4 py-2 rounded-lg text-sm">
             Code
           </a>
         </div>
-
       </div>
     </div>
 
     <!-- CARD 2 -->
-    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer hover:-translate-y-1"
          data-aos="fade-up" data-aos-delay="100">
 
+      <img src="images/terraform-diagram.png"
+           class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+
       <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Terraform Modules</h3>
+        <h3 class="text-xl font-semibold mb-2 flex justify-between">
+          Terraform Modules
+          <span class="text-blue-400 text-sm">↗</span>
+        </h3>
+
         <p class="text-gray-400 text-sm">
           Reusable modules enabling scalable deployments.
         </p>
+
+        <p class="mt-4 text-blue-400 text-sm font-medium">
+          View Case Study →
+        </p>
       </div>
 
-      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-6">
+      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
 
-        <h3 class="text-lg font-semibold mb-2">Module Design</h3>
+        <img src="images/terraform-diagram.png"
+             class="w-full h-32 object-contain mb-4 rounded-lg">
 
-        <p class="text-gray-400 text-sm mb-4">
-          Modular Terraform architecture supporting dev/prod environments with reusable components.
+        <p class="text-gray-400 text-xs mb-4">
+          Modular Terraform structure supporting dev/prod environments.
         </p>
 
         <div class="flex gap-3">
           <a href="terraform-modules.html"
-             class="bg-blue-600 px-4 py-2 rounded-lg text-sm hover:scale-105 transition">
+             class="bg-blue-600 px-4 py-2 rounded-lg text-sm">
             Case Study
           </a>
 
           <a href="#"
-             class="border border-gray-500 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+             class="border border-gray-500 px-4 py-2 rounded-lg text-sm">
             Code
           </a>
         </div>
-
       </div>
     </div>
 
     <!-- CARD 3 -->
-    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer hover:-translate-y-1"
          data-aos="fade-up" data-aos-delay="200">
 
+      <img src="images/zero-trust-diagram.png"
+           class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+
       <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Zero Trust Architecture</h3>
+        <h3 class="text-xl font-semibold mb-2 flex justify-between">
+          Zero Trust Architecture
+          <span class="text-blue-400 text-sm">↗</span>
+        </h3>
+
         <p class="text-gray-400 text-sm">
           Identity-first model with segmentation and least privilege access.
         </p>
+
+        <p class="mt-4 text-blue-400 text-sm font-medium">
+          View Case Study →
+        </p>
       </div>
 
-      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-6">
+      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
 
-        <h3 class="text-lg font-semibold mb-2">Security Model</h3>
+        <img src="images/zero-trust-diagram.png"
+             class="w-full h-32 object-contain mb-4 rounded-lg">
 
-        <p class="text-gray-400 text-sm mb-4">
-          End-to-end Zero Trust design across identity, network, and workloads.
+        <p class="text-gray-400 text-xs mb-4">
+          End-to-end Zero Trust across identity, network, and workloads.
         </p>
 
         <div class="flex gap-3">
           <a href="zero-trust.html"
-             class="bg-blue-600 px-4 py-2 rounded-lg text-sm hover:scale-105 transition">
+             class="bg-blue-600 px-4 py-2 rounded-lg text-sm">
             Case Study
           </a>
 
           <a href="#"
-             class="border border-gray-500 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+             class="border border-gray-500 px-4 py-2 rounded-lg text-sm">
             Code
           </a>
         </div>
-
       </div>
     </div>
 
   </div>
 </section>
 
+ <section class="py-20 px-6 bg-gray-950 text-center">
+  <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">
+    Impact & Achievements
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+    <div data-aos="zoom-in">
+      <h3 class="text-4xl font-bold text-blue-400 mb-2">30–50%</h3>
+      <p class="text-gray-400">
+        Reduction in cloud infrastructure costs through optimization and right-sizing strategies
+      </p>
+    </div>
+
+    <div data-aos="zoom-in" data-aos-delay="100">
+      <h3 class="text-4xl font-bold text-blue-400 mb-2">100%</h3>
+      <p class="text-gray-400">
+        Infrastructure automated using Terraform, enabling consistent and repeatable deployments
+      </p>
+    </div>
+
+    <div data-aos="zoom-in" data-aos-delay="200">
+      <h3 class="text-4xl font-bold text-blue-400 mb-2">Zero</h3>
+      <p class="text-gray-400">
+        Critical security incidents across deployed environments through Zero Trust architecture and security best practices
+      </p>
+    </div>
+
+  </div>
+</section> 
 <!-- MY APPROACH -->
 <section class="py-20 px-6 bg-gray-900 text-center">
   <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">My Approach</h2>
@@ -218,40 +309,69 @@
 
     <div data-aos="fade-left">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
-
+<h3 class="text-blue-400 mb-4 text-sm uppercase tracking-wide">
+  Cloud • Security • Architecture
+</h3>
       <p class="text-gray-400 mb-4">
-        I am a Cloud & Security Architect specializing in Azure and Infrastructure as Code.
-      </p>
+I design and deliver secure, scalable cloud architectures for mission-critical workloads across modern environments, using Terraform and Zero Trust principles.
+</p>
 
-      <p class="text-gray-400 mb-4">
-        I design secure, scalable environments using Terraform and Zero Trust principles.
-      </p>
+<p class="text-gray-400 mb-4">
+With over 7 years of experience spanning cloud engineering, architecture, and cybersecurity, I specialize in helping organizations migrate, optimize, and protect their infrastructure with production-ready solutions.
+</p>
 
-      <p class="text-gray-400">
-        I deliver production-ready systems aligned with enterprise standards.
-      </p>
+<p class="text-gray-400 mb-4">
+As AI adoption accelerates, I focus on securing AI platforms and enabling organizations to safely harness AI for efficiency, innovation, and smarter ways of working.
+</p>
+
+<p class="text-gray-400">
+Beyond my professional work, I mentor and support the next generation of young technology professionals, helping them build meaningful careers in IT.
+</p>
     </div>
 
   </div>
 </section>
+
+<!-- CERTIFICATIONS -->
+<section class="py-16 px-6 bg-gray-950 text-center">
+  <h2 class="text-2xl font-semibold mb-8" data-aos="fade-up">Certifications</h2>
+
+  <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+
+    <span class="bg-gray-800 px-4 py-2 rounded-full">Microsoft Cybersecurity Architect Expert</span>
+    <span class="bg-gray-800 px-4 py-2 rounded-full">Azure Solution Architect Expert</span>
+    <span class="bg-gray-800 px-4 py-2 rounded-full">Azure Security Engineer</span>
+    <span class="bg-gray-800 px-4 py-2 rounded-full">Azure Security Operations Analyst</span>
+
+  </div>
+</section>  
 
 <!-- CTA -->
 <section id="contact" class="py-20 px-6 text-center">
   <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Let’s Work Together</h2>
 
   <p class="text-gray-400 mb-6" data-aos="fade-up" data-aos-delay="100">
-    Looking for a cloud architect? Let’s talk.
+    Looking for a cloud security professional? Let’s talk.
   </p>
 
   <a href="mailto:copychigo@gmail.com"
-     class="bg-blue-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition"
-     data-aos="fade-up" data-aos-delay="200">
+     class="bg-blue-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
      Email Me
   </a>
+
+  <!-- CALENDLY -->
+  <a href="https://calendly.com/copychigo"
+     target="_blank"
+     class="bg-green-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
+     Book a Call
+  </a>
+
+</div>
 </section>
 
 <footer class="text-center py-6 text-gray-500">
   © 2026 Chigozie Iluno
+  <a href="cv.pdf" class="text-blue-400">Download CV</a>
 </footer>
 
 <script>

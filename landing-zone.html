@@ -2,33 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Azure Landing Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Landing Zone | Case Study</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-950 text-white p-10">
 
-<h1 class="text-4xl font-bold mb-6">Azure Landing Zone</h1>
+<body class="bg-gray-950 text-white font-sans px-6 py-12">
 
-<p class="mb-4 text-gray-300">
-Designed a secure enterprise Azure landing zone using hub-and-spoke architecture.
-</p>
+<div class="max-w-5xl mx-auto">
 
-<h2 class="text-2xl font-semibold mt-6 mb-2">Architecture</h2>
-<ul class="list-disc ml-6 text-gray-400">
-  <li>Azure Firewall</li>
-  <li>Private Endpoints</li>
-  <li>NSG + Route Tables</li>
-</ul>
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold mb-4">
+    Azure Landing Zone Architecture
+  </h1>
 
-<h2 class="text-2xl font-semibold mt-6 mb-2">Tools</h2>
-<p class="text-gray-400">Terraform, Azure, Networking</p>
+  <p class="text-gray-400 text-lg mb-8">
+    Designed a secure, scalable Azure foundation aligned with Zero Trust principles and enterprise cloud adoption frameworks.
+  </p>
 
-<h2 class="text-2xl font-semibold mt-6 mb-2">Outcome</h2>
-<p class="text-gray-400">
-Improved security posture and created scalable foundation aligned with best practices.
-</p>
+  <!-- ACTIONS -->
+  <div class="flex gap-4 mb-12">
+    <a href="https://github.com/chigo4404/azure-landing-zone-terraform"
+       target="_blank"
+       class="bg-blue-600 px-6 py-3 rounded-xl">
+      View Code
+    </a>
 
-<a href="index.html" class="inline-block mt-8 text-blue-400">← Back</a>
+    <a href="index.html"
+       class="border border-gray-600 px-6 py-3 rounded-xl">
+      Back
+    </a>
+  </div>
+
+  <!-- IMPACT -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Business Impact</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 text-gray-400">
+      <p>✔ Reduced infrastructure cost by 30–50% through optimization</p>
+      <p>✔ Achieved 100% Infrastructure as Code adoption</p>
+      <p>✔ Improved deployment speed by 2–5x</p>
+      <p>✔ Eliminated major security gaps using Zero Trust principles</p>
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Problem Context & Challenges</h2>
+
+    <p class="text-gray-400 mb-4">
+      The organization required a standardized cloud foundation to support multiple workloads, but existing environments were fragmented,
+      manually configured, and lacked centralized security controls.
+    </p>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Inconsistent environment configurations</li>
+      <li>• Limited network segmentation</li>
+      <li>• No centralized security enforcement</li>
+      <li>• High operational overhead due to manual deployments</li>
+    </ul>
+  </section>
+
+ <section class="mb-12">
+  <h2 class="text-2xl font-semibold mb-6">Before vs After Architecture</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+
+    <!-- BEFORE -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-red-400">Before</h3>
+           
+
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>• Flat network design</li>
+        <li>• Public exposure of services</li>
+        <li>• No centralized security control</li>
+        <li>• Manual deployments</li>
+      </ul>
+    </div>
+
+    <!-- AFTER -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-green-400">After</h3>
+           
+
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>• Hub-spoke architecture</li>
+        <li>• Centralized firewall</li>
+        <li>• Private endpoints</li>
+        <li>• Fully automated via Terraform</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ARCHITECTURE DECISIONS -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Architecture Decisions</h2>
+
+    <ul class="text-gray-400 space-y-3">
+      <li>
+        <strong>Hub-and-Spoke Network:</strong>
+        Centralized control point for traffic inspection and segmentation.
+      </li>
+
+      <li>
+        <strong>Azure Firewall:</strong>
+        Selected for centralized ingress/egress filtering and logging.
+      </li>
+
+      <li>
+        <strong>Private Endpoints:</strong>
+        Eliminated public exposure of services.
+      </li>
+
+      <li>
+        <strong>Terraform Modules:</strong>
+        Enabled reusable, environment-agnostic deployments.
+      </li>
+    </ul>
+  </section>
+
+  <!-- TRADE-OFFS -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Trade-offs & Considerations</h2>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Increased initial complexity vs long-term scalability</li>
+      <li>• Higher upfront cost (firewall) vs improved security posture</li>
+      <li>• Strict network controls vs developer flexibility</li>
+    </ul>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Architecture Overview</h2>
+
+    <img src="images/landing-zone-diagram.png"
+         class="rounded-xl border border-gray-800 shadow-lg mb-4">
+
+    <p class="text-gray-400">
+      The architecture enforces a Zero Trust model where all traffic flows through a centralized firewall.
+      Workloads are segmented across spoke networks, ensuring isolation and control.
+    </p>
+  </section>
+
+  <!-- SECURITY MODEL -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Security Model</h2>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Least privilege access across resources</li>
+      <li>• Network segmentation using NSGs</li>
+      <li>• Private connectivity via Private Endpoints</li>
+      <li>• Centralized inspection via Azure Firewall</li>
+    </ul>
+  </section>
+
+  <!-- IMPLEMENTATION -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Implementation Approach</h2>
+
+    <p class="text-gray-400 mb-4">
+      Infrastructure was deployed using modular Terraform design, separating concerns into network, security, and compute layers.
+    </p>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Modular Terraform structure</li>
+      <li>• Environment separation (dev / prod)</li>
+      <li>• Reusable infrastructure components</li>
+    </ul>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Key Learnings</h2>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Strong architecture upfront reduces long-term complexity</li>
+      <li>• Security must be embedded, not added later</li>
+      <li>• Automation is essential for consistency at scale</li>
+    </ul>
+  </section>
+
+</div>
 
 </body>
 </html>
