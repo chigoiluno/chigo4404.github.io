@@ -1,115 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Terraform Modules | Case Study</title>
+
+  <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- THEME LOAD -->
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!localStorage.getItem('theme'))
+    ) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
 </head>
 
-<body class="bg-gray-950 text-white font-sans px-6 py-12">
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white font-sans transition-colors duration-300 px-6 py-12">
 
-<div class="max-w-5xl mx-auto">
-
-  <!-- TITLE -->
-  <h1 class="text-4xl font-bold mb-4">
-    Terraform Modular Architecture
-  </h1>
-
-  <p class="text-gray-400 text-lg mb-8">
-    Designed a reusable, scalable Terraform module system to standardize infrastructure deployment across environments.
-  </p>
-
-  <!-- ACTIONS -->
-  <div class="flex gap-4 mb-12">
-    <a href="https://github.com/chigo4404/your-repo"
-       target="_blank"
-       class="bg-blue-600 px-6 py-3 rounded-xl">
-      View Code
-    </a>
+  <!-- NAV -->
+  <nav class="max-w-6xl mx-auto flex justify-between items-center mb-12">
 
     <a href="index.html"
-       class="border border-gray-600 px-6 py-3 rounded-xl">
-      Back
+       class="text-xl font-bold tracking-wide hover:text-blue-400 transition">
+
+      Chigozie Iluno
+
     </a>
-  </div>
 
-  <!-- IMPACT -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Impact</h2>
+    <div class="flex gap-4 items-center">
 
-    <ul class="text-gray-400 space-y-2">
-      <li>• Reduced deployment time by 2–5x</li>
-      <li>• Enabled consistent infrastructure across environments</li>
-      <li>• Reduced configuration drift across teams</li>
-      <li>• Improved maintainability and scalability</li>
-    </ul>
-  </section>
+      <a href="index.html"
+         class="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
 
-  <!-- PROBLEM -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Problem</h2>
+        ← Back
 
-    <p class="text-gray-400">
-      Infrastructure deployments were inconsistent and repetitive, leading to configuration drift,
-      duplication of effort, and increased operational overhead.
-    </p>
-  </section>
+      </a>
 
-  <!-- CONTEXT -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Context & Constraints</h2>
+      <!-- THEME TOGGLE -->
+      <button id="theme-toggle"
+              class="border border-gray-300 dark:border-gray-700 px-3 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
 
-    <ul class="text-gray-400 space-y-2">
-      <li>• Multiple environments (dev, test, prod) required consistency</li>
-      <li>• Teams deployed infrastructure independently</li>
-      <li>• Need for reusable infrastructure patterns</li>
-      <li>• Requirement for secure, auditable deployments</li>
-    </ul>
-  </section>
+        ☀️
 
-  <!-- SOLUTION -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Solution</h2>
+      </button>
 
-    <p class="text-gray-400 mb-4">
-      Designed a modular Terraform architecture separating infrastructure concerns into reusable components.
+    </div>
+
+  </nav>
+
+  <div class="max-w-5xl mx-auto">
+
+    <!-- TITLE -->
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Terraform Modular Architecture
+    </h1>
+
+    <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 max-w-3xl">
+      Designed a reusable, scalable Infrastructure as Code framework using Terraform modules
+      to standardize deployments, reduce operational overhead, and improve governance across environments.
     </p>
 
-    <ul class="text-gray-400 space-y-2">
-      <li>• Core modules (network, security, compute)</li>
-      <li>• Environment-specific configurations</li>
-      <li>• Standardized variables and outputs</li>
-      <li>• Centralized configuration patterns</li>
-    </ul>
-  </section>
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-2xl p-6 mb-12">
 
-  <!-- ARCHITECTURE -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Architecture</h2>
+      <h2 class="text-xl font-semibold mb-3">
+        Executive Summary
+      </h2>
 
-    <img src="images/terraform-diagram.png"
-         class="rounded-xl border border-gray-800 mb-4">
+      <p class="text-gray-600 dark:text-gray-400">
+        Built a modular Terraform architecture enabling secure, repeatable, and scalable infrastructure deployments
+        across multiple cloud environments while improving operational consistency and reducing configuration drift.
+      </p>
 
-    <p class="text-gray-400">
-      Infrastructure is broken into reusable modules, enabling consistent and scalable deployments.
-    </p>
-  </section>
+    </div>
 
-  <!-- CODE SNIPPET -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Implementation Example</h2>
+    <!-- ACTIONS -->
+    <div class="flex flex-wrap gap-4 mb-12">
 
-    <p class="text-gray-400 mb-4">
-      Example of using a reusable Terraform module for network provisioning.
-    </p>
+      <a href="https://github.com/chigo4404/your-repo"
+         target="_blank"
+         class="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
 
-    <p class="text-xs text-gray-500 mb-2">Terraform (HCL)</p>
+        View Code
 
-    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 overflow-x-auto mb-6">
-<pre class="text-sm text-gray-300"><code>
+      </a>
+
+      <a href="index.html"
+         class="border border-gray-300 dark:border-gray-700 px-6 py-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+
+        Back to Portfolio
+
+      </a>
+
+    </div>
+
+    <!-- IMPACT -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Business Impact
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">2–5x Faster Deployments</p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Reduced infrastructure provisioning time using reusable module patterns.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">Reduced Configuration Drift</p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Standardized infrastructure definitions across environments and teams.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">Improved Scalability</p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Enabled rapid onboarding of new environments without duplicating infrastructure logic.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">Operational Consistency</p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Improved maintainability through centralized module governance and reusable standards.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Problem Context
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        Infrastructure deployments were repetitive and inconsistent across environments,
+        resulting in configuration drift, operational inefficiencies, and reduced governance visibility.
+      </p>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Environment inconsistency across dev/test/prod</li>
+        <li>• Duplicate infrastructure definitions</li>
+        <li>• Manual operational overhead</li>
+        <li>• Limited scalability for future workloads</li>
+
+      </ul>
+
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Architecture Overview
+      </h2>
+
+      <img src="images/terraform-diagram.png"
+           class="rounded-2xl border border-gray-300 dark:border-gray-800 shadow-lg mb-6">
+
+      <p class="text-gray-600 dark:text-gray-400">
+        Infrastructure components were abstracted into reusable modules,
+        enabling centralized governance, repeatable deployments, and environment-specific customization.
+      </p>
+
+    </section>
+
+    <!-- DESIGN APPROACH -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Modular Design Strategy
+      </h2>
+
+      <div class="space-y-6">
+
+        <div>
+          <h3 class="font-semibold mb-2">
+            Core Infrastructure Modules
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400">
+            Infrastructure concerns were separated into reusable modules such as network,
+            security, and compute layers.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">
+            Environment Separation
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400">
+            Environment-specific variables enabled deployment isolation across dev, test, and production.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">
+            Standardized Interfaces
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400">
+            Variables and outputs were standardized to simplify module consumption and scalability.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CODE -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Implementation Example
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        Example of a reusable Terraform network module enabling consistent infrastructure deployment.
+      </p>
+
+      <div class="bg-black rounded-2xl border border-gray-800 overflow-hidden shadow-lg mb-6">
+
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-800 bg-gray-900">
+
+          <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+
+          <span class="text-xs text-gray-400 ml-4">
+            Terraform (HCL)
+          </span>
+
+        </div>
+
+<pre class="text-sm text-gray-300 p-6 overflow-x-auto"><code>
 module "network" {
   source              = "../modules/network"
+
   resource_group_name = var.resource_group_name
   location            = var.location
 
@@ -117,28 +272,73 @@ module "network" {
   address_space       = ["10.0.0.0/16"]
 }
 </code></pre>
-    </div>
 
-    <div class="text-gray-400 space-y-2">
-      <p><strong>Modular Design:</strong> Reusable across environments</p>
-      <p><strong>Parameterization:</strong> Flexible configuration</p>
-      <p><strong>Scalability:</strong> Enables rapid deployment</p>
-    </div>
-  </section>
+      </div>
 
-  <!-- SECURITY SNIPPET -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Security Configuration Example</h2>
+      <div class="grid md:grid-cols-3 gap-4">
 
-    <p class="text-gray-400 mb-4">
-      Security policies embedded directly into infrastructure.
-    </p>
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-4">
+          <h3 class="font-semibold mb-2">
+            Reusability
+          </h3>
 
-    <p class="text-xs text-gray-500 mb-2">Terraform (HCL)</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Same module deployed consistently across environments.
+          </p>
+        </div>
 
-    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 overflow-x-auto mb-6">
-<pre class="text-sm text-gray-300"><code>
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-4">
+          <h3 class="font-semibold mb-2">
+            Parameterization
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Flexible deployment through standardized inputs.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-4">
+          <h3 class="font-semibold mb-2">
+            Scalability
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Enables rapid expansion without infrastructure duplication.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECURITY -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Security as Code
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        Security policies were embedded directly into infrastructure deployment workflows.
+      </p>
+
+      <div class="bg-black rounded-2xl border border-gray-800 overflow-hidden shadow-lg mb-6">
+
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-800 bg-gray-900">
+
+          <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+
+          <span class="text-xs text-gray-400 ml-4">
+            Terraform (HCL)
+          </span>
+
+        </div>
+
+<pre class="text-sm text-gray-300 p-6 overflow-x-auto"><code>
 resource "azurerm_network_security_group" "nsg" {
+
   name                = "nsg-hub"
   location            = var.location
   resource_group_name = var.resource_group_name
@@ -149,66 +349,134 @@ resource "azurerm_network_security_group" "nsg" {
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
+
     destination_port_range     = "443"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
 }
 </code></pre>
-    </div>
 
-    <div class="text-gray-400 space-y-2">
-      <p><strong>Security as Code:</strong> Enforced via Terraform</p>
-      <p><strong>Consistency:</strong> Same rules everywhere</p>
-      <p><strong>Auditability:</strong> Fully traceable changes</p>
-    </div>
-  </section>
+      </div>
 
-  <!-- DECISIONS -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Architecture Decisions</h2>
+      <div class="grid md:grid-cols-3 gap-4">
 
-    <ul class="text-gray-400 space-y-2">
-      <li>• Modular design for reuse</li>
-      <li>• Environment separation for isolation</li>
-      <li>• Parameter-driven deployments</li>
-      <li>• State isolation for reliability</li>
-    </ul>
-  </section>
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-4">
+          <h3 class="font-semibold mb-2">
+            Security Enforcement
+          </h3>
 
-  <!-- TRADE-OFFS -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Trade-offs</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Security controls deployed consistently through code.
+          </p>
+        </div>
 
-    <ul class="text-gray-400 space-y-2">
-      <li>• Higher initial complexity</li>
-      <li>• Learning curve for teams</li>
-      <li>• Need for module version management</li>
-    </ul>
-  </section>
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-4">
+          <h3 class="font-semibold mb-2">
+            Auditability
+          </h3>
 
-  <!-- SCALABILITY -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Scalability & Reusability</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Infrastructure changes fully traceable through version control.
+          </p>
+        </div>
 
-    <p class="text-gray-400">
-      Enables rapid onboarding of new environments without duplicating logic.
-    </p>
-  </section>
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-4">
+          <h3 class="font-semibold mb-2">
+            Governance
+          </h3>
 
-  <!-- FUTURE -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Future Improvements</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Standardized security posture across deployments.
+          </p>
+        </div>
 
-    <ul class="text-gray-400 space-y-2">
-      <li>• CI/CD integration</li>
-      <li>• Policy enforcement</li>
-      <li>• Cost governance</li>
-      <li>• Module versioning</li>
-    </ul>
-  </section>
+      </div>
 
-</div>
+    </section>
+
+    <!-- DECISIONS -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Architecture Decisions
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Modular design for reusability and maintainability</li>
+        <li>• Environment isolation for operational reliability</li>
+        <li>• State separation to reduce deployment risk</li>
+        <li>• Parameter-driven deployments for flexibility</li>
+
+      </ul>
+
+    </section>
+
+    <!-- TRADE-OFFS -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Trade-offs & Considerations
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Higher initial architecture complexity</li>
+        <li>• Learning curve for module adoption</li>
+        <li>• Ongoing module version management requirements</li>
+
+      </ul>
+
+    </section>
+
+    <!-- FUTURE -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Future Enhancements
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• CI/CD pipeline integration</li>
+        <li>• Policy-as-Code enforcement</li>
+        <li>• Cost governance automation</li>
+        <li>• Advanced module versioning strategy</li>
+
+      </ul>
+
+    </section>
+
+  </div>
+
+  <!-- THEME SCRIPT -->
+  <script>
+
+    const toggleBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    if (html.classList.contains('dark')) {
+      toggleBtn.innerHTML = '☀️';
+    } else {
+      toggleBtn.innerHTML = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+
+      html.classList.toggle('dark');
+
+      if (html.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.innerHTML = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.innerHTML = '🌙';
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
