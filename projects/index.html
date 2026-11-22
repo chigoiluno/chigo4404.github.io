@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Architecture & Security Case Studies | Chigozie Iluno</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- AOS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+  </style>
+
+</head>
+
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white transition-colors duration-300">
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 w-full z-50">
+
+    <!-- BLUE GLOW -->
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2
+                w-[950px] h-[180px]
+                bg-blue-500 opacity-35 blur-3xl rounded-full pointer-events-none">
+    </div>
+
+    <nav class="relative w-full
+                bg-white/85 dark:bg-[#071120]/85
+                backdrop-blur-xl
+                border-b border-blue-500/30
+                px-6 py-5
+                flex justify-between items-center">
+
+      <!-- LOGO -->
+      <a href="../index.html"
+        class="text-2xl md:text-3xl font-extrabold tracking-tight
+               text-black dark:text-white">
+
+        Chigozie Iluno Samuel, CISSP
+
+      </a>
+
+      <!-- LINKS -->
+      <div class="flex items-center gap-4 md:gap-8">
+
+        <a href="index.html"
+          class="text-blue-500 text-sm md:text-lg font-medium">
+          Projects
+        </a>
+
+        <a href="../insights/index.html"
+          class="text-black/80 dark:text-white/90
+                 hover:text-blue-500 dark:hover:text-blue-400
+                 transition duration-300 text-sm md:text-lg font-medium">
+          Insights
+        </a>
+
+        <a href="../index.html#contact"
+          class="text-black/80 dark:text-white/90
+                 hover:text-blue-500 dark:hover:text-blue-400
+                 transition duration-300 text-sm md:text-lg font-medium">
+          Contact
+        </a>
+
+        <!-- TOGGLE -->
+        <button id="theme-toggle"
+          class="w-12 h-12 rounded-2xl
+                 border border-blue-500/40
+                 bg-white dark:bg-[#101b2d]
+                 text-black dark:text-white
+                 hover:border-blue-400
+                 hover:bg-gray-100 dark:hover:bg-[#16243a]
+                 transition-all duration-300">
+
+          ☀️
+
+        </button>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-40 md:pt-52 pb-20 px-6 relative overflow-hidden">
+
+    <div class="absolute top-20 left-1/2 transform -translate-x-1/2
+                w-[900px] h-[300px]
+                bg-blue-500 opacity-10 blur-3xl rounded-full pointer-events-none">
+    </div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+
+      <div
+        class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-800 rounded-full px-4 py-2 text-sm mb-6"
+        data-aos="fade-up">
+
+        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+
+        Azure • Terraform • Zero Trust • Security Architecture
+
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
+        data-aos="fade-up"
+        data-aos-delay="100">
+
+        Architecture & Security Case Studies
+
+      </h1>
+
+      <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400"
+        data-aos="fade-up"
+        data-aos-delay="200">
+
+        Enterprise cloud architecture, Terraform automation, Zero Trust security implementations, and governance-focused cloud solutions.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CATEGORY TAGS -->
+  <section class="pb-14 px-6">
+
+    <div class="max-w-6xl mx-auto flex flex-wrap gap-4 justify-center"
+      data-aos="fade-up">
+
+      <span class="bg-gray-100 dark:bg-gray-900 px-5 py-2 rounded-full text-sm">
+        Azure Architecture
+      </span>
+
+      <span class="bg-gray-100 dark:bg-gray-900 px-5 py-2 rounded-full text-sm">
+        Terraform
+      </span>
+
+      <span class="bg-gray-100 dark:bg-gray-900 px-5 py-2 rounded-full text-sm">
+        Zero Trust
+      </span>
+
+      <span class="bg-gray-100 dark:bg-gray-900 px-5 py-2 rounded-full text-sm">
+        Governance
+      </span>
+
+      <span class="bg-gray-100 dark:bg-gray-900 px-5 py-2 rounded-full text-sm">
+        Cloud Security
+      </span>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="pb-24 px-6">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- PROJECT 1 -->
+      <a href="landing-zone.html"
+        class="group bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1"
+        data-aos="fade-up">
+
+        <img src="../images/landing-zone-diagram.png"
+          class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+
+        <div class="p-6">
+
+          <div class="mb-3 text-blue-500 text-sm font-semibold">
+            Azure Architecture
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-blue-500 transition">
+
+            Enterprise Azure Landing Zone
+
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+
+            Secure enterprise landing zone architecture aligned with Zero Trust and governance principles.
+
+          </p>
+
+          <span class="text-blue-500 font-medium">
+            View Case Study →
+          </span>
+
+        </div>
+
+      </a>
+
+      <!-- PROJECT 2 -->
+      <a href="terraform-modules.html"
+        class="group bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1"
+        data-aos="fade-up"
+        data-aos-delay="100">
+
+        <img src="../images/terraform-diagram.png"
+          class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+
+        <div class="p-6">
+
+          <div class="mb-3 text-blue-500 text-sm font-semibold">
+            Terraform Automation
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-blue-500 transition">
+
+            Reusable Terraform Module Framework
+
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+
+            Modular Infrastructure-as-Code framework for scalable and governed Azure deployments.
+
+          </p>
+
+          <span class="text-blue-500 font-medium">
+            View Case Study →
+          </span>
+
+        </div>
+
+      </a>
+
+      <!-- PROJECT 3 -->
+      <a href="zero-trust.html"
+        class="group bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1"
+        data-aos="fade-up"
+        data-aos-delay="200">
+
+        <img src="../images/zero-trust-diagram.png"
+          class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+
+        <div class="p-6">
+
+          <div class="mb-3 text-blue-500 text-sm font-semibold">
+            Zero Trust Security
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-blue-500 transition">
+
+            Zero Trust Security Architecture
+
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+
+            Identity-first security architecture with segmentation and defense-in-depth controls.
+
+          </p>
+
+          <span class="text-blue-500 font-medium">
+            View Case Study →
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-24 px-6">
+
+    <div
+      class="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 to-blue-500 rounded-3xl p-10 md:p-16 text-center shadow-2xl"
+      data-aos="fade-up">
+
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+
+        Let’s Build Secure Cloud Solutions
+
+      </h2>
+
+      <p class="text-blue-100 max-w-2xl mx-auto mb-8 text-lg">
+
+        Need help with cloud architecture, Terraform automation, Zero Trust implementation, or governance strategy?
+
+      </p>
+
+      <a href="../index.html#contact"
+        class="bg-white text-blue-600 px-8 py-4 rounded-2xl font-semibold inline-block hover:scale-105 transition duration-300">
+
+        Contact Me
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-300 dark:border-gray-800 py-8 text-center text-gray-500">
+
+    <p class="mb-2">
+      © 2026 Chigozie Iluno
+    </p>
+
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    const toggleBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light') {
+
+      html.classList.remove('dark');
+      toggleBtn.innerHTML = '🌙';
+
+    } else {
+
+      html.classList.add('dark');
+      toggleBtn.innerHTML = '☀️';
+
+    }
+
+    toggleBtn.addEventListener('click', () => {
+
+      html.classList.toggle('dark');
+
+      if (html.classList.contains('dark')) {
+
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.innerHTML = '☀️';
+
+      } else {
+
+        localStorage.setItem('theme', 'light');
+        toggleBtn.innerHTML = '🌙';
+
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>
